@@ -1,6 +1,7 @@
 package com.example.listycity;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -17,10 +18,10 @@ public class CityList {
      * @param city
      */
     public void add(City city){
-//        if(cities.contains(city)){
-//            throw new IllegalArgumentException();
-//        }
-//        cities.add(city);
+        if(cities.contains(city)){
+            throw new IllegalArgumentException();
+        }
+        cities.add(city);
     }
 
 
@@ -30,11 +31,9 @@ public class CityList {
      * return sorted list
      */
     public List<City> getCities(){
-//        List<City> sorted = cities;
-//        Collections.sort(sorted);
-//        return sorted;
-
-        return  new ArrayList<>();
+        List<City> sorted = cities;
+        Collections.sort(sorted);
+        return sorted;
     }
 
     /**
@@ -44,8 +43,7 @@ public class CityList {
      * return boolean
      */
     public boolean hasCity(City city){
-        //return cities.contains(city);
-        return false;
+        return cities.contains(city);
     }
 
     /**
@@ -53,10 +51,10 @@ public class CityList {
      * @param city
      */
     public void delete(City city){
-//        if(!hasCity(city)){
-//            throw new IllegalArgumentException();
-//        }
-//        cities.remove(city);
+        if(!hasCity(city)){
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
 
     }
 
@@ -66,8 +64,7 @@ public class CityList {
      * return integer
      */
     public int countCities(){
-//        return cities.size();
-        return -1;
+        return cities.size();
     }
 
 
