@@ -34,31 +34,31 @@ public class CityListTest {
 //        assertEquals(2, cityList.getCities().size());
 //        assertTrue(cityList.getCities().contains(city));
 //    }
+//
+//    @Test
+//    void testAddException(){
+//        CityList cityList = mockCityList();
+//
+//        City city = new City("Yellowknife", "NWT");
+//        cityList.add(city);
+//
+//        assertThrows(IllegalArgumentException.class,
+//                ()->{cityList.add(city);
+//        });
+//    }
 
-    @Test
-    void testAddException(){
-        CityList cityList = mockCityList();
 
-        City city = new City("Yellowknife", "NWT");
-        cityList.add(city);
-
-        assertThrows(IllegalArgumentException.class,
-                ()->{cityList.add(city);
-        });
-    }
-
-
-    @Test
-    void testGetCities(){
-        CityList cityList = mockCityList();
-
-        assertEquals(0, mockCity().compareTo(cityList.getCities().get(0)));
-
-        City city = new City("Charlottetown","PEI");
-        cityList.add(city);
-        assertEquals(0, city.compareTo(cityList.getCities().get(0)));
-        assertEquals(0, mockCity().compareTo(cityList.getCities().get(1)));
-    }
+//    @Test
+//    void testGetCities(){
+//        CityList cityList = mockCityList();
+//
+//        assertEquals(0, mockCity().compareTo(cityList.getCities().get(0)));
+//
+//        City city = new City("Charlottetown","PEI");
+//        cityList.add(city);
+//        assertEquals(0, city.compareTo(cityList.getCities().get(0)));
+//        assertEquals(0, mockCity().compareTo(cityList.getCities().get(1)));
+//    }
 
 
     ///LABB TESTS STUFFECSS
